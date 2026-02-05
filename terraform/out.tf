@@ -1,9 +1,8 @@
-output "instance_public_ip" {
-  description = "Public IP of Strapi EC2 instance"
-  value       = module.ec2.public_ip
+output "website_url" {
+  description = "Access your Strapi app here"
+  value       = "http://${module.lb.alb_dns_name}"
 }
 
-output "strapi_url" {
-  description = "Strapi application URL"
-  value       = "http://${module.ec2.public_ip}:1337"
+output "nat_gateway_ip" {
+  value = module.networking.nat_gw_public_ip
 }
