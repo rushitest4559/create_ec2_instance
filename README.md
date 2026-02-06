@@ -32,6 +32,9 @@ Run `terraform apply --auto-approve`, wait ~20 mins, and open the URL in your br
 
 🚀 Done! Your Strapi instance is live.
 
+## 🔐 SSH & Access
+No manual SSH setup is required. Terraform automatically generates a private key in your `~/.ssh` folder and uploads the public key to AWS. To access instances in the private subnet, simply use a Bastion host; the keys are already configured for a seamless connection.
+
 ![terraform apply 1](./images/terraform_apply_1.PNG)
 ![terraform apply 2](./images/terraform_apply_2.PNG)
 ![terraform apply 3](./images/terraform_apply_3.PNG)
